@@ -103,35 +103,35 @@ class _LineLogoLinksState extends State<LineLogoLinks> {
                   ),
                 ),
               ),
-              SizedBox(height: 15.0),
-              DelayedDisplay(
-                delay: Duration(seconds: 1),
-                fadeIn: true,
-                slidingBeginOffset: Offset.zero,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 20.0),
-                  child: GestureDetector(
-                    onTap: () async {
-                      const url =
-                          'https://www.instagram.com/artistic_guruji?igsh=Nm80b2xoZWZmaXk5';
-                      if (await canLaunch(url)) {
-                        await launch(url,
-                            forceWebView: true,
-                            enableJavaScript: true);
-                      } else {
-                        throw 'Could not launch $url';
-                      }
-                    },
-                    child: SvgPicture.asset(
-                      'images/svg/instagram-brands.svg',
-                      width: 30,
-                      height: 30,
-                      color:
-                      widget.isTapped ? Colors.white : Colors.black,
-                    ),
-                  ),
-                ),
-              ),
+              // SizedBox(height: 15.0),
+              // DelayedDisplay(
+              //   delay: Duration(seconds: 1),
+              //   fadeIn: true,
+              //   slidingBeginOffset: Offset.zero,
+              //   child: Padding(
+              //     padding: const EdgeInsets.only(left: 20.0),
+              //     child: GestureDetector(
+              //       onTap: () async {
+              //         const url =
+              //             'https://www.instagram.com/artistic_guruji?igsh=Nm80b2xoZWZmaXk5';
+              //         if (await canLaunch(url)) {
+              //           await launch(url,
+              //               forceWebView: true,
+              //               enableJavaScript: true);
+              //         } else {
+              //           throw 'Could not launch $url';
+              //         }
+              //       },
+              //       child: SvgPicture.asset(
+              //         'images/svg/instagram-brands.svg',
+              //         width: 30,
+              //         height: 30,
+              //         color:
+              //         widget.isTapped ? Colors.white : Colors.black,
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
           SizedBox.fromSize(
