@@ -122,13 +122,7 @@ class _LineLogoLinksState extends State<LineLogoLinks> {
               //           throw 'Could not launch $url';
               //         }
               //       },
-              //       child: SvgPicture.asset(
-              //         'images/svg/instagram-brands.svg',
-              //         width: 30,
-              //         height: 30,
-              //         color:
-              //         widget.isTapped ? Colors.white : Colors.black,
-              //       ),
+              //       child: const Icon(Icons.file_download_rounded,size: 30,),
               //     ),
               //   ),
               // ),
