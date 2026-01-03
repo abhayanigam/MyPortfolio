@@ -122,22 +122,20 @@ class _CommonpageState extends State<Commonpage> {
                     ),
                     // Square card to display with delay when AnimatedYinYang is tapped
                     if (_isTapped)
-                      DelayedDisplay(
-                        delay: Duration(seconds: 1),
-                        fadeIn: true,
-                        slidingBeginOffset: Offset.zero,
-                        child: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(90, 10, 90, 10),
-                            child: Flexible(
-                              child: Card(
-                                elevation: 10,
-                                shadowColor: Colors.black,
-                                color: Colors.white,
-                                child: SizedBox(
-                                  width: 1000,
-                                  height: 500,
-                                  child: Padding(
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 10),
+                          child: Card(
+                            elevation: 10,
+                            shadowColor: Colors.black,
+                            color: Colors.white,
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints(
+                                maxWidth: 1000,
+                                maxHeight: 500,
+                              ),
+                              child: Padding(
                                     padding: const EdgeInsets.all(10.0),
                                     child: LayoutBuilder(
                                       builder: (context, constraints) {
@@ -358,10 +356,9 @@ class _CommonpageState extends State<Commonpage> {
                                     ),
                                   ),
                                 ),
-                              ),
-                            ),
                           ),
                         ),
+                      ),
                       ),
                   ],
                 ),
