@@ -122,243 +122,244 @@ class _CommonpageState extends State<Commonpage> {
                     ),
                     // Square card to display with delay when AnimatedYinYang is tapped
                     if (_isTapped)
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
-                          child: Card(
-                            elevation: 10,
-                            shadowColor: Colors.black,
-                            color: Colors.white,
-                            child: ConstrainedBox(
-                              constraints: BoxConstraints(
-                                maxWidth: 1000,
-                                maxHeight: 500,
-                              ),
-                              child: Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: LayoutBuilder(
-                                      builder: (context, constraints) {
-                                        // Determine if the layout should be a Row or Column based on the available width
-                                        bool isWide =
-                                            constraints.maxWidth > 600;
-                                        return isWide
-                                            ? Row(
-                                                children: <Widget>[
-                                                  Expanded(
-                                                    child: Container(
-                                                      padding: EdgeInsets.all(
-                                                          16), // Add some padding if needed
-                                                      child: Center(
-                                                        // Center the text vertically
-                                                        child: Column(
-                                                          mainAxisSize: MainAxisSize
-                                                              .min, // Center the column content
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            RichText(
-                                                              text: TextSpan(
-                                                                children: [
-                                                                  TextSpan(
-                                                                    text:
-                                                                        'Hi,\n',
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .black,
-                                                                      fontSize:
-                                                                          55,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold,
-                                                                    ),
-                                                                  ),
-                                                                  TextSpan(
-                                                                    text:
-                                                                        "I'm Abhaya Nigam.\n",
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .black,
-                                                                      fontSize:
-                                                                          45,
-                                                                    ),
-                                                                  ),
-                                                                  TextSpan(
-                                                                    text:
-                                                                        "I'm a Full-Stack Software Engineer specializing in Flutter, Next.js, and scalable backend systems.",
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .grey,
-                                                                      fontSize:
-                                                                          25,
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  const VerticalDivider(
-                                                    width: 20,
-                                                    thickness: 1,
-                                                    indent: 20,
-                                                    endIndent: 0,
-                                                    color: Colors.grey,
-                                                  ),
-                                                  Expanded(
-                                                    child: Container(
-                                                      child: Stack(
+                      DelayedDisplay(
+                        delay: Duration(seconds: 1),
+                        fadeIn: true,
+                        slidingBeginOffset: Offset.zero,
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 10),
+                            child: Card(
+                              elevation: 10,
+                              shadowColor: Colors.black,
+                              color: Colors.white,
+                              child: ConstrainedBox(
+                                constraints: BoxConstraints(
+                                  maxWidth: 1000,
+                                  maxHeight: 500,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: LayoutBuilder(
+                                    builder: (context, constraints) {
+                                      // Determine if the layout should be a Row or Column based on the available width
+                                      bool isWide = constraints.maxWidth > 600;
+                                      return isWide
+                                          ? Row(
+                                              children: <Widget>[
+                                                Expanded(
+                                                  child: Container(
+                                                    padding: EdgeInsets.all(
+                                                        16), // Add some padding if needed
+                                                    child: Center(
+                                                      // Center the text vertically
+                                                      child: Column(
+                                                        mainAxisSize: MainAxisSize
+                                                            .min, // Center the column content
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
                                                         children: [
-                                                          // Background text with low opacity
-                                                          Center(
-                                                            child: Text(
-                                                              'AN',
-                                                              style: TextStyle(
-                                                                color: Colors
-                                                                    .black
-                                                                    .withOpacity(
-                                                                        0.1), // Very low opacity
-                                                                fontSize: 190,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          // Main content
-                                                          Padding(
-                                                            padding: EdgeInsets.all(
-                                                                16), // Add some padding if needed
-                                                            child: Center(
-                                                              child: Container(
-                                                                child: Image.asset(
-                                                                    'images/Images/portrait.png'),
-                                                              ),
+                                                          RichText(
+                                                            text: TextSpan(
+                                                              children: [
+                                                                TextSpan(
+                                                                  text: 'Hi,\n',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: Colors
+                                                                        .black,
+                                                                    fontSize:
+                                                                        55,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                  ),
+                                                                ),
+                                                                TextSpan(
+                                                                  text:
+                                                                      "I'm Abhaya Nigam.\n",
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: Colors
+                                                                        .black,
+                                                                    fontSize:
+                                                                        45,
+                                                                  ),
+                                                                ),
+                                                                TextSpan(
+                                                                  text:
+                                                                      "I'm a Full-Stack Software Engineer specializing in Flutter, Next.js, and scalable backend systems.",
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: Colors
+                                                                        .grey,
+                                                                    fontSize:
+                                                                        25,
+                                                                  ),
+                                                                ),
+                                                              ],
                                                             ),
                                                           ),
                                                         ],
                                                       ),
                                                     ),
                                                   ),
-                                                ],
-                                              )
-                                            : Column(
-                                                children: <Widget>[
-                                                  Expanded(
-                                                    child: Container(
-                                                      padding: EdgeInsets.all(
-                                                          5), // Add some padding if needed
-                                                      child: Center(
-                                                        child: Column(
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            RichText(
-                                                              text: TextSpan(
-                                                                children: [
-                                                                  TextSpan(
-                                                                    text:
-                                                                        'Hi,\n',
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .black,
-                                                                      fontSize:
-                                                                          38,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold,
-                                                                    ),
-                                                                  ),
-                                                                  TextSpan(
-                                                                    text:
-                                                                        "I'm Abhaya Nigam.\n",
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .black,
-                                                                      fontSize:
-                                                                          30,
-                                                                    ),
-                                                                  ),
-                                                                  TextSpan(
-                                                                    text:
-                                                                        "Full-Stack Software Engineer specializing in Flutter, Next.js, and scalable backend systems.",
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .grey,
-                                                                      fontSize:
-                                                                          16,
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  const Divider(
-                                                    height: 20,
-                                                    thickness: 1,
-                                                    indent: 20,
-                                                    endIndent: 0,
-                                                    color: Colors.grey,
-                                                  ),
-                                                  Expanded(
-                                                    child: Container(
-                                                      child: Stack(
-                                                        children: [
-                                                          // Background text with low opacity
-                                                          Center(
-                                                            child: Text(
-                                                              'AN',
-                                                              style: TextStyle(
-                                                                color: Colors
-                                                                    .black
-                                                                    .withOpacity(
-                                                                        0.1), // Very low opacity
-                                                                fontSize: 118,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                              ),
+                                                ),
+                                                const VerticalDivider(
+                                                  width: 20,
+                                                  thickness: 1,
+                                                  indent: 20,
+                                                  endIndent: 0,
+                                                  color: Colors.grey,
+                                                ),
+                                                Expanded(
+                                                  child: Container(
+                                                    child: Stack(
+                                                      children: [
+                                                        // Background text with low opacity
+                                                        Center(
+                                                          child: Text(
+                                                            'AN',
+                                                            style: TextStyle(
+                                                              color: Colors
+                                                                  .black
+                                                                  .withOpacity(
+                                                                      0.1), // Very low opacity
+                                                              fontSize: 190,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
                                                             ),
                                                           ),
-                                                          // Main content
-                                                          Padding(
-                                                            padding: EdgeInsets.all(
-                                                                5), // Add some padding if needed
-                                                            child: Center(
-                                                              child: Container(
-                                                                child: Image.asset(
-                                                                    'images/Images/portrait.png'),
-                                                              ),
+                                                        ),
+                                                        // Main content
+                                                        Padding(
+                                                          padding: EdgeInsets.all(
+                                                              16), // Add some padding if needed
+                                                          child: Center(
+                                                            child: Container(
+                                                              child: Image.asset(
+                                                                  'images/Images/portrait.png'),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            )
+                                          : Column(
+                                              children: <Widget>[
+                                                Expanded(
+                                                  child: Container(
+                                                    padding: EdgeInsets.all(
+                                                        5), // Add some padding if needed
+                                                    child: Center(
+                                                      child: Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          RichText(
+                                                            text: TextSpan(
+                                                              children: [
+                                                                TextSpan(
+                                                                  text: 'Hi,\n',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: Colors
+                                                                        .black,
+                                                                    fontSize:
+                                                                        38,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                  ),
+                                                                ),
+                                                                TextSpan(
+                                                                  text:
+                                                                      "I'm Abhaya Nigam.\n",
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: Colors
+                                                                        .black,
+                                                                    fontSize:
+                                                                        30,
+                                                                  ),
+                                                                ),
+                                                                TextSpan(
+                                                                  text:
+                                                                      "Full-Stack Software Engineer specializing in Flutter, Next.js, and scalable backend systems.",
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: Colors
+                                                                        .grey,
+                                                                    fontSize:
+                                                                        16,
+                                                                  ),
+                                                                ),
+                                                              ],
                                                             ),
                                                           ),
                                                         ],
                                                       ),
                                                     ),
                                                   ),
-                                                ],
-                                              );
-                                      },
-                                    ),
+                                                ),
+                                                const Divider(
+                                                  height: 20,
+                                                  thickness: 1,
+                                                  indent: 20,
+                                                  endIndent: 0,
+                                                  color: Colors.grey,
+                                                ),
+                                                Expanded(
+                                                  child: Container(
+                                                    child: Stack(
+                                                      children: [
+                                                        // Background text with low opacity
+                                                        Center(
+                                                          child: Text(
+                                                            'AN',
+                                                            style: TextStyle(
+                                                              color: Colors
+                                                                  .black
+                                                                  .withOpacity(
+                                                                      0.1), // Very low opacity
+                                                              fontSize: 118,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        // Main content
+                                                        Padding(
+                                                          padding: EdgeInsets.all(
+                                                              5), // Add some padding if needed
+                                                          child: Center(
+                                                            child: Container(
+                                                              child: Image.asset(
+                                                                  'images/Images/portrait.png'),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                    },
                                   ),
                                 ),
+                              ),
+                            ),
                           ),
                         ),
-                      ),
                       ),
                   ],
                 ),

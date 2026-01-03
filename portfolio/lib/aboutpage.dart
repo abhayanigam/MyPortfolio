@@ -57,16 +57,14 @@ class _AboutPageState extends State<AboutPage>
                       padding: screenWidth > 600
                           ? const EdgeInsets.fromLTRB(50, 10, 10, 50)
                           : const EdgeInsets.fromLTRB(20, 10, 10, 50),
-                      child: Positioned(
-                        child: DelayedDisplay(
-                          delay: const Duration(milliseconds: 500),
-                          child: Text(
-                            'ABOUT',
-                            style: TextStyle(
-                              fontFamily: 'BebasNeue',
-                              fontSize: screenWidth > 600 ? 150 : 100,
-                              color: Colors.grey,
-                            ),
+                      child: DelayedDisplay(
+                        delay: const Duration(milliseconds: 500),
+                        child: Text(
+                          'ABOUT',
+                          style: TextStyle(
+                            // fontFamily: 'BebasNeue',
+                            fontSize: screenWidth > 600 ? 150 : 100,
+                            color: Colors.grey,
                           ),
                         ),
                       ),
@@ -91,6 +89,10 @@ class _AboutPageState extends State<AboutPage>
                           'images/Images/spaceman.png',
                           width: screenWidth > 600 ? 500 : screenWidth * 0.5,
                           height: screenWidth > 600 ? 500 : screenWidth * 0.5,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Icon(Icons.error,
+                                color: Colors.red, size: 50);
+                          },
                         ),
                       ),
                     ),
@@ -103,49 +105,48 @@ class _AboutPageState extends State<AboutPage>
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const SizedBox(height: 30),
-                        Padding(
-                          padding: EdgeInsets.only(
-                            left: MediaQuery.of(context).orientation ==
-                                    Orientation.landscape
-                                ? 50
-                                : (screenWidth > 900 ? 230.0 : 70.0),
-                          ),
-                          child: Container(
-                            constraints: const BoxConstraints(maxWidth: 1000),
-                            width: screenWidth > 900 ? 1000 : screenWidth * 0.9,
-                            height:
-                                screenHeight > 600 ? 550 : screenHeight * 0.8,
-                            padding: const EdgeInsets.all(40.0),
-                            decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(0.9),
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: Colors.white,
-                                width: 2.0,
-                              ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: MediaQuery.of(context).orientation ==
+                                  Orientation.landscape
+                              ? 50
+                              : (screenWidth > 900 ? 230.0 : 70.0),
+                        ),
+                        child: Container(
+                          constraints: const BoxConstraints(maxWidth: 1000),
+                          width: screenWidth > 900 ? 1000 : screenWidth * 0.9,
+                          height: screenHeight > 600 ? 550 : screenHeight * 0.8,
+                          padding: const EdgeInsets.all(40.0),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 2.0,
                             ),
-                            child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 20.0),
-                                    child: Text(
-                                      "Hi Everyone,\n"
-                                      "I'm a Full-Stack Software Engineer with expertise in Flutter, Next.js, Java Spring Boot, and AI Agents. "
-                                      "Currently building high-performance solutions at Bellpost, I focus on scalable backend services, dynamic web platforms, and cross-platform mobile applications. "
-                                      "My journey includes impactful roles at 1Team.ai and Salesken.ai, where I delivered robust APIs and refined user experiences. "
-                                      "I am passionate about creating efficient, elegant, and user-centric digital solutions.",
-                                      style: TextStyle(
-                                        fontFamily: 'BebasNeue',
-                                        fontSize: screenWidth > 600 ? 30 : 20,
-                                        color: Colors.white,
-                                      ),
-                                      textAlign: TextAlign.center,
+                          ),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Text(
+                                    "Hi Everyone,\n"
+                                    "I'm a Full-Stack Software Engineer with expertise in Flutter, Next.js, Java Spring Boot, and AI Agents. "
+                                    "Currently building high-performance solutions at Bellpost, I focus on scalable backend services, dynamic web platforms, and cross-platform mobile applications. "
+                                    "My journey includes impactful roles at 1Team.ai and Salesken.ai, where I delivered robust APIs and refined user experiences. "
+                                    "I am passionate about creating efficient, elegant, and user-centric digital solutions.",
+                                    style: TextStyle(
+                                      // fontFamily: 'BebasNeue',
+                                      fontSize: screenWidth > 600 ? 30 : 20,
+                                      color: Colors.white,
                                     ),
+                                    textAlign: TextAlign.center,
                                   ),
+                                ),
                               ],
                             ),
                           ),
